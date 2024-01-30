@@ -33,9 +33,6 @@
     <link rel="stylesheet" href="css/style.css" />
     
     <style>
-      /* .media-body p {
-        color: #fff;
-      } */
 
       .link {
         margin-top: 100px;
@@ -44,7 +41,7 @@
 
       .practice-area {
         height: 350px;
-        /* border: 1px solid #ddd; */
+      
         padding: 20px;
         margin-bottom: 20px;
         overflow: hidden;
@@ -61,7 +58,6 @@
         padding-right: 20px; /* Add right padding to ensure content visibility */
         margin: 0px 0; /* Add margin around the scrollable paragraph */
       }
-
       .practice-area p::-webkit-scrollbar {
         width: 0;
         background-color: transparent;
@@ -70,10 +66,40 @@
         color: #6f42c1;
         font-weight: bold;
       }
+
+      @media (max-width: 767.98px) {
+  .practice-area {
+    border-left: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    height: auto; /* Changed height to auto */
+    padding: 20px; /* Adjusted padding */
+  }
+
+  .practice-area p {
+    max-height: none; /* Removed max-height */
+    overflow-y: visible; /* Removed overflow-y */
+    margin-top: 10px;
+    padding-right: 0; /* Removed right padding */
+  }
+
+  .practice-area p::-webkit-scrollbar {
+    display: none; /* Removed scrollbar */
+  }
+
+  .practice-area p {
+    margin-top: 10px;
+    padding-right: 0;
+    margin-bottom: 0; /* Added margin-bottom to separate paragraphs */
+    text-align: justify; /* Justify text for better readability */
+  }
+
+
+  /* No changes in other styles within the media query */
+}
     </style>
   </head>
   <body>
-    
+
     <nav
       class="navbar px-md-0 navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
       id="ftco-navbar"
@@ -222,7 +248,7 @@
                   <a href="#" data-toggle="modal" data-target="#fullDetailsModal">Read More</a>
                 </p>
                 <div class="years d-flex">
-                  <h4 class="number mr-2" data-number="10">0</h4>
+                  <h4 class="number mr-2" data-number="15">0</h4>
                   <h4>Years of Experienced</h4>
                 </div>
               </div>

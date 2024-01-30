@@ -8466,9 +8466,13 @@ h1, h2, h3, h4, h5,
     font-size: 18px;
     font-weight: 600;
     color: #fff; }
+    .services p {
+      color: #666666; }
     .services h3 a {
       color: #000000; }
     @media (min-width: 992px) {
+      .services p {
+        color: #fff; }
       .services h3 a {
         color: #fff; } }
   .services .num {
