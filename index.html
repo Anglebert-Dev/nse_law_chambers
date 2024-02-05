@@ -49,14 +49,16 @@
 
       .practice-area h3 {
         margin-top: 10px;
+        font-weight: bold;
       }
 
       .practice-area p {
         max-height: 150px;
         overflow-y: auto;
         margin-top: 10px;
-        padding-right: 20px; /* Add right padding to ensure content visibility */
-        margin: 0px 0; /* Add margin around the scrollable paragraph */
+        padding-right: 20px; 
+        margin: 0px 0; 
+        text-align: center;
       }
       .practice-area p::-webkit-scrollbar {
         width: 0;
@@ -71,30 +73,32 @@
   .practice-area {
     border-left: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    height: auto; /* Changed height to auto */
-    padding: 20px; /* Adjusted padding */
+    height: auto; 
+    padding: 20px;
   }
 
   .practice-area p {
-    max-height: none; /* Removed max-height */
-    overflow-y: visible; /* Removed overflow-y */
+    max-height: none;
+    overflow-y: visible;
     margin-top: 10px;
-    padding-right: 0; /* Removed right padding */
+    padding-right: 0;
   }
 
   .practice-area p::-webkit-scrollbar {
-    display: none; /* Removed scrollbar */
+    display: none; 
   }
 
   .practice-area p {
     margin-top: 10px;
     padding-right: 0;
-    margin-bottom: 0; /* Added margin-bottom to separate paragraphs */
-    text-align: justify; /* Justify text for better readability */
+    margin-bottom: 0; 
+    text-align:initial;
   }
 
+}
 
-  /* No changes in other styles within the media query */
+.p{
+  text-align: left;
 }
     </style>
   </head>
@@ -132,10 +136,10 @@
               <a href="#services" class="nav-link">Services</a>
             </li>
             <li class="nav-item">
-              <a href="#attorneys" class="nav-link">Attorneys</a>
+              <a href="#case" class="nav-link">Case Studies</a>
             </li>
             <li class="nav-item">
-              <a href="#case" class="nav-link">Case Studies</a>
+              <a href="#consultation" class="nav-link">Consultation</a>
             </li>
             <li class="nav-item">
               <a href="#contact" class="nav-link">Contact Us</a>
@@ -242,13 +246,13 @@
               <div class="col-md-12 heading-section ftco-animate">
                 <span class="subheading">Welcome to NSE LAW CHAMBERS</span>
                 <h2 class="mb-4">We Always Fight For Your Justice to Win</h2>
-                <p>
+                <p class="p">
                   NSE LAW CHAMBERS stands as a stalwart in the legal arena, delivering an expansive spectrum of legal services that span across diverse domains of law. Our core expertise encompasses administrative and public law, company law, commercial law, mergers and acquisitions, tax law, and labor law, with a keen focus on ensuring comprehensive legal support to our clients.
                   At NSE LAW CHAMBERS, we pride ourselves on our commitment to excellence and unwavering dedication to providing top-notch legal solutions. 
                   <a href="#" data-toggle="modal" data-target="#fullDetailsModal">Read More</a>
                 </p>
                 <div class="years d-flex">
-                  <h4 class="number mr-2" data-number="15">0</h4>
+                  <h4 class="number mr-2" data-number="8">0</h4>
                   <h4>Years of Experienced</h4>
                 </div>
               </div>
@@ -302,9 +306,7 @@
                 <span class="flaticon-family"></span>
               </div>
               <h3>
-                <a href="https://abayo.law/practice/banking-corporate-finance-law/"
-                  >Banking - Corporate, Finance Law</a
-                >
+                Banking - Corporate, Finance Law
               </h3>
               <p>
                 We represent different banks and other financial institutions in
@@ -321,7 +323,7 @@
               >
                 <span class="flaticon-auction"></span>
               </div>
-              <h3><a href="https://abayo.law/practice/public-procurement-law/">Public Procurement Law</a></h3>
+              <h3>Public Procurement Law</h3>
               <p>
                 We represent entrepreneurs, companies and individuals before
                 judicial and extrajudicial instances for cases relating to
@@ -340,7 +342,7 @@
               >
                 <span class="flaticon-shield"></span>
               </div>
-              <h3><a href="https://abayo.law/practice/labour-law-employment-law-firm-in-rwanda/"> Labour Law</a></h3>
+              <h3> Labour Law</h3>
               <p>
                 The Law Firm handles employment cases for different business
                 entities or individual employees claiming their rights during or
@@ -359,9 +361,8 @@
                 <span class="flaticon-handcuffs"></span>
               </div>
               <h3>
-                <a href="https://abayo.law/practice/private-public-international-law-community-legal-aid/"
-                  >Private / Public International Law</a
-                >
+                Private / Public International Law
+                
               </h3>
               <p>
                 With globalization of businesses, transactions across different
@@ -383,7 +384,7 @@
               >
                 <span class="flaticon-house"></span>
               </div>
-              <h3><a href="https://abayo.law/practice/administrative-law-property-law-firm-in-rwanda/">Administrative Law</a></h3>
+              <h3>Administrative Law</h3>
               <p>
                 Administrative Law Our Attorneys are experienced in representing
                 clients in administrative instances for cases relating to
@@ -402,7 +403,7 @@
               >
                 <span class="flaticon-employee"></span>
               </div>
-              <h3><a href="https://abayo.law/practice/migration-law-immigration-attorney/">Migration Law</a></h3>
+              <h3>Migration Law</h3>
               <p>
                 With our expertise in migration law, we assist clients in all
                 migration cases pertaining to application and renewal of travel
@@ -421,7 +422,7 @@
               >
                 <span class="flaticon-medicine"></span>
               </div>
-              <h3><a href="https://abayo.law/practice/criminal-defence-best-law-firm-in-kigali-rwanda/"> Criminal Defence</a></h3>
+              <h3>Criminal Defence</h3>
               <p>
                 With our advocates specialized in criminal law and experienced
                 in criminal procedures, we follow up all criminal cases from the
@@ -444,7 +445,7 @@
               >
                 <span class="flaticon-money"></span>
               </div>
-              <h3><a href="https://abayo.law/practice/public-auctions-find-a-lawyer/">Public Auctions</a></h3>
+              <h3>Public Auctions</h3>
               <p>
                 It is rare to find a successful public auction procedure that
                 leaves the parties satisfied by its outcome, as it has become a
@@ -460,206 +461,7 @@
         <a href="practice-areas.html" class="link">Read More >></a>
       </div>
     </section>
-    <!-- attorney -->
-    <section class="ftco-section" id="attorneys">
-      <!-- <section class="ftco-section ftco-no-pt" id="attorneys"> -->
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 text-center heading-section ftco-animate">
-            <span class="subheading">Our Attorney</span>
-            <h2 class="mb-4">Our Legal Attorneys</h2>
-          </div>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-lg-3 col-sm-6">
-            <div class="block-2 ftco-animate">
-              <div class="flipper">
-                <div
-                  class="front"
-                  style="background-image: url(/images/person_1.jpg)"
-                >
-                  <div class="box">
-                    <h2>John Doe</h2>
-                    <p>Civil Lawyer</p>
-                  </div>
-                </div>
-                <div class="back">
-                  <!-- back content -->
-                  <blockquote>
-                    <p>
-                      &ldquo;Even the all-powerful Pointing has no control about
-                      the blind texts it is an almost unorthographic life One
-                      day however a small line of blind text &rdquo;
-                    </p>
-                  </blockquote>
-                  <div class="author d-flex">
-                    <div class="image align-self-center">
-                      <img src="images/person_1.jpg" alt="" />
-                    </div>
-                    <div class="name align-self-center ml-3">
-                      John Doe
-                      <span class="position">Civil Lawyer</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6">
-            <div class="block-2 ftco-animate">
-              <div class="flipper">
-                <div
-                  class="front"
-                  style="background-image: url(/images/person_2.jpg)"
-                >
-                  <div class="box">
-                    <h2>John Doe</h2>
-                    <p>Business Lawyer</p>
-                  </div>
-                </div>
-                <div class="back">
-                  <!-- back content -->
-                  <blockquote>
-                    <p>
-                      &ldquo;Even the all-powerful Pointing has no control about
-                      the blind texts it is an almost unorthographic life One
-                      day however a small line of blind text &rdquo;
-                    </p>
-                  </blockquote>
-                  <div class="author d-flex">
-                    <div class="image align-self-center">
-                      <img src="images/person_2.jpg" alt="" />
-                    </div>
-                    <div class="name align-self-center ml-3">
-                      John Doe<span class="position">Business Lawyer</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6">
-            <div class="block-2 ftco-animate">
-              <div class="flipper">
-                <div
-                  class="front"
-                  style="background-image: url(/images/person_3.jpg)"
-                >
-                  <div class="box">
-                    <h2>John Doe</h2>
-                    <p>Criminal Defense</p>
-                  </div>
-                </div>
-                <div class="back">
-                  <!-- back content -->
-                  <blockquote>
-                    <p>
-                      &ldquo;Even the all-powerful Pointing has no control about
-                      the blind texts it is an almost unorthographic life One
-                      day however a small line of blind text &rdquo;
-                    </p>
-                  </blockquote>
-                  <div class="author d-flex">
-                    <div class="image align-self-center">
-                      <img src="images/person_3.jpg" alt="" />
-                    </div>
-                    <div class="name align-self-center ml-3">
-                      John Doe
-                      <span class="position">Criminal Defense</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6">
-            <div class="block-2 ftco-animate">
-              <div class="flipper">
-                <div
-                  class="front"
-                  style="background-image: url(/images/person_4.jpg)"
-                >
-                  <div class="box">
-                    <h2>John Doe</h2>
-                    <p>Insurance Lawyer</p>
-                  </div>
-                </div>
-                <div class="back">
-                  <!-- back content -->
-                  <blockquote>
-                    <p>
-                      &ldquo;Even the all-powerful Pointing has no control about
-                      the blind texts it is an almost unorthographic life One
-                      day however a small line of blind text &rdquo;
-                    </p>
-                  </blockquote>
-                  <div class="author d-flex">
-                    <div class="image align-self-center">
-                      <img src="images/person_4.jpg" alt="" />
-                    </div>
-                    <div class="name align-self-center ml-3">
-                      John Doe
-                      <span class="position">Insurance Lawyer</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section
-      class="ftco-consultation ftco-section img"
-      style="background-image: url(images/bg_2.jpg)"
-    >
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row d-md-flex justify-content-end">
-          <div class="col-md-6 half p-3 p-md-5 ftco-animate heading-section">
-            <span class="subheading">Booking an Appointment</span>
-            <h2 class="mb-4">Free Consultation</h2>
-            <form action="#" class="consultation">
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Your Name"
-                />
-              </div>
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Your Email"
-                />
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject" />
-              </div>
-              <div class="form-group">
-                <textarea
-                  name=""
-                  id=""
-                  cols="30"
-                  rows="7"
-                  class="form-control"
-                  placeholder="Message"
-                ></textarea>
-              </div>
-              <div class="form-group">
-                <input
-                  type="submit"
-                  value="Send message"
-                  class="btn btn-primary py-3 px-4"
-                />
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section class="ftco-section" id="case">
       <div class="container">
@@ -861,6 +663,60 @@
         </div>
       </div>
     </section>
+
+
+    <!-- consultation -->
+    <section
+    class="ftco-consultation ftco-section img"
+    style="background-image: url(images/bg_2.jpg)"
+    id="consultation"
+  >
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row d-md-flex justify-content-end">
+        <div class="col-md-6 half p-3 p-md-5 ftco-animate heading-section">
+          <span class="subheading">Booking an Appointment</span>
+          <h2 class="mb-4">Free Consultation</h2>
+          <form action="#" class="consultation">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Your Name"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Your Email"
+              />
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Subject" />
+            </div>
+            <div class="form-group">
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                rows="7"
+                class="form-control"
+                placeholder="Message"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <input
+                type="submit"
+                value="Send message"
+                class="btn btn-primary py-3 px-4"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
     <!-- contact us -->
 
