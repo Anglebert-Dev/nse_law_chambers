@@ -6598,7 +6598,7 @@ button.bg-dark:focus {
 .pl-3,
 .px-3 {
   padding-left: 1rem !important; }
-
+ 
 .p-4 {
   padding: 1.5rem !important; }
 
@@ -9132,7 +9132,7 @@ textarea.form-control {
     margin-bottom: 15px; }
   .block-23 ul li span {
     color: rgba(255, 255, 255, 0.7); }
-  .block-23 ul li .icon, .block-23 ul li .text {
+  .block-23 ul li .icon, .block-23 ul li .text { 
     display: table-cell;
     vertical-align: top; }
   .block-23 ul li .icon {

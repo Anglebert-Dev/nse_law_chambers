@@ -48,8 +48,9 @@
       max-height: 150px;
       overflow-y: auto;
       margin-top: 10px;
-      padding-right: 20px; /* Add right padding to ensure content visibility */
-      margin: 0px 0; /* Add margin around the scrollable paragraph */
+      padding-right: 20px; 
+      margin: 0px 0; 
+      text-align:center;
     }
 
     .practice-area p::-webkit-scrollbar {
@@ -95,30 +96,28 @@
   .practice-area {
     border-left: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    height: auto; /* Changed height to auto */
-    padding: 20px; /* Adjusted padding */
+    height: auto; 
+    padding: 20px; 
   }
 
   .practice-area p {
-    max-height: none; /* Removed max-height */
-    overflow-y: visible; /* Removed overflow-y */
+    max-height: none;
+    overflow-y: visible;
     margin-top: 10px;
-    padding-right: 0; /* Removed right padding */
+    padding-right: 0;
   }
 
   .practice-area p::-webkit-scrollbar {
-    display: none; /* Removed scrollbar */
+    display: none;
   }
 
   .practice-area p {
     margin-top: 10px;
     padding-right: 0;
-    margin-bottom: 0; /* Added margin-bottom to separate paragraphs */
-    text-align: justify; /* Justify text for better readability */
+    margin-bottom: 0; 
+    text-align:initial;
   }
 
-
-  /* No changes in other styles within the media query */
 }
 
   </style>
@@ -729,7 +728,6 @@
     
       </div>
     </section>
-    
 
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
@@ -739,7 +737,7 @@
               <h2 class="ftco-heading-2" style="font-size: 17px">
                 About NSE <span class="span">LAW CHAMBERS</span>
               </h2>
-              <p>
+              <p class="p">
                 NSE LAW CHAMBERS offers a wide range of legal services covering
                 different law domains dominated by administrative and public
                 law, company law, commercial law, mergers and acquisitions, tax
@@ -821,12 +819,12 @@
               <h2 class="ftco-heading-2">Business Hours</h2>
               <div class="opening-hours">
                 <h4>Opening Days:</h4>
-                <p class="pl-3">
-                  <span>Monday – Friday : 9am to 20 pm</span>
+                <p class="pl-3" style="font-size: 14.5px;">
+                  <span>Monday - Friday : 9am to 20 pm</span>
                   <span>Saturday : 9am to 17 pm</span>
                 </p>
                 <h4>Vacations:</h4>
-                <p class="pl-3">
+                <p class="pl-3" style="font-size: 14.5px;">
                   <span>All Sunday Days</span>
                   <span>All Official Holidays</span>
                 </p>
@@ -845,15 +843,15 @@
                     >
                   </li>
                   <li>
-                    <a href="#"
+                    <a href="tel:/788352940"
                       ><span class="icon icon-phone"></span
-                      ><span class="text">(+250) 788 352 940</span></a
+                      ><span class="text">(+250) 788352940</span></a
                     >
                   </li>
                   <li>
-                    <a href="#"
+                    <a href="mailto:nselawchambers@gmail.com"
                       ><span class="icon icon-envelope"></span
-                      ><span class="text">nshimieugene@gmail.com / nselawchambers@gmail.com</span>
+                      ><span class="text">nselawchambers@gmail.com</span>
                     
                     </a>
                   </li>
@@ -876,7 +874,6 @@
         </div>
       </div>
     </footer>
-
     <!-- loader -->
     <div id="ftco-loader" class="show fullscreen">
       <svg class="circular" width="48px" height="48px">
