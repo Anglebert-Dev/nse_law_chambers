@@ -796,7 +796,7 @@
           </div>
 
           <div class="col-lg-6 d-flex">
-            <div id="map" class="bg-white" style="height: 400px;"></div>
+            <div id="map" class="bg-white" style=""></div>
           </div>
         </div>
       </div>
@@ -985,8 +985,23 @@
     <script src="js/aos.js"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
     <script src="js/scrollax.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2sallback=initMap" async defer"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      function embedGoogleMap() {
+        var mapContainer = document.getElementById('map');
+        var iframe = document.createElement('iframe');
+        iframe.setAttribute('src', 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3987.465117786378!2d30.100589!3d-1.967941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMcKwNTgnMDQuNiJTIDMwwrAwNicwMi4xIkU!5e0!3m2!1sen!2srw!4v1707484800162!5m2!1sen!2srw');
+        iframe.setAttribute('width', '100%');
+        iframe.setAttribute('height', '100%');
+        iframe.setAttribute('style', 'border:0;');
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.setAttribute('loading', 'lazy');
+        iframe.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+        mapContainer.appendChild(iframe);
+      }
+      window.onload = embedGoogleMap; 
+    </script>
+    
   </body>
 </html>
