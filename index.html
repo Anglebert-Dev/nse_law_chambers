@@ -290,7 +290,10 @@
       </div>
     </div>
   </div>
+    </div>
     </section>
+
+
   
   
   
@@ -763,10 +766,22 @@
           </div>
         </div>
         <div class="row block-9">
-          <div id="notification-modal" style="display: none;">
-            Message sent successfully!
+
+                 <!-- Notification Modal -->
+       <div id="notification-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="emmailnotification">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="notification-modal-title"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="notification-modal-body"></div>
           </div>
-          
+        </div>
+      </div>
+        
           <div class="col-lg-6 order-md-last d-flex">
             <form id="contact-form" class="bg-light p-5 contact-form">
               <div class="form-group">
@@ -774,7 +789,7 @@
                 <div id="name-error" class="error-message error"></div>
               </div>
               <div class="form-group">
-                <input type="email" id="email" class="form-control" placeholder="Your Email" >
+                <input type="text" id="email" class="form-control" placeholder="Your Email" >
                 <div id="email-error" class="error-message error"></div>
               </div>
               <div class="form-group">
@@ -790,9 +805,11 @@
               </div>
             </form>
           </div>
+    <!-- map -->
+        
           
           <div class="col-lg-6 d-flex">
-            <div id="map" class="bg-white" style=""></div>
+            <div id="map" class="bg-white" ></div>
           </div>
         </div>
       </div>
@@ -1000,80 +1017,100 @@
     </script>
 
 <script>
-  const form = document.getElementById('contact-form');
-  const notificationModal = document.getElementById('notification-modal');
+ const form = document.getElementById('contact-form');
+const notificationModal = document.getElementById('notification-modal');
+const modalTitle = document.getElementById('notification-modal-title');
+const modalBody = document.getElementById('notification-modal-body');
 
-  form.addEventListener('submit', async (event) => {
-    event.preventDefault();
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
 
-    // Clear previous error messages
-    document.querySelectorAll('.error-message').forEach(error => error.textContent = '');
+  // Clear previous error messages
+  document.querySelectorAll('.error-message').forEach(error => error.textContent = '');
 
-    // Validate form fields
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value;
+  // Validate form fields
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const subject = document.getElementById('subject').value;
+  const message = document.getElementById('message').value;
 
-    let isValid = true;
+  let isValid = true;
 
-    if (!name) {
-      document.getElementById('name-error').textContent = 'Name is required';
-      isValid = false;
-    }
-
-    if (!email) {
-      document.getElementById('email-error').textContent = 'Email is required';
-      isValid = false;
-    } else if (!isValidEmail(email)) {
-      document.getElementById('email-error').textContent = 'Invalid email format';
-      isValid = false;
-    }
-
-    if (!subject) {
-      document.getElementById('subject-error').textContent = 'Subject is required';
-      isValid = false;
-    }
-
-    if (!message) {
-      document.getElementById('message-error').textContent = 'Message is required';
-      isValid = false;
-    }
-
-    if (!isValid) return;
-
-    // Send form data to the server
-    try {
-      const response = await fetch('http://localhost:5000/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ name, email, subject, message })
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        notificationModal.style.display = 'block';
-        form.reset();
-      } else {
-        // Handle server errors
-        Object.keys(data.errors).forEach(field => {
-          document.getElementById(`${field}-error`).textContent = data.errors[field];
-        });
-      }
-    } catch (error) {
-      console.error('Error sending form data:', error);
-    }
-  });
-
-  function isValidEmail(email) {
-    // Basic email validation
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
+  if (!name) {
+    document.getElementById('name-error').textContent = 'Name is required';
+    isValid = false;
   }
+
+  if (!email) {
+    document.getElementById('email-error').textContent = 'Email is required';
+    isValid = false;
+  } else if (!isValidEmail(email)) {
+    document.getElementById('email-error').textContent = 'Invalid email format';
+    isValid = false;
+  }
+
+  if (!subject) {
+    document.getElementById('subject-error').textContent = 'Subject is required';
+    isValid = false;
+  }
+
+  if (!message) {
+    document.getElementById('message-error').textContent = 'Message is required';
+    isValid = false;
+  }
+
+  if (!isValid) return;
+
+  // Send form data to the server
+  try {
+    const response = await fetch('http://localhost:5000/send-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ name, email, subject, message })
+    });
+
+    const data = await response.json();
+    if (response.ok) {
+      showModal('Success', 'Message sent successfully!');
+      form.reset();
+  } else {
+    // // Handle server errors
+    // const data = await response.json();
+    // if (data.errors) {
+    //   Object.keys(data.errors).forEach(field => {
+    //     document.getElementById(`${field}-error`).textContent = data.errors[field];
+    //   });
+
+     // Show error message from server in modal
+     const responseData = await response.json();
+      const errorMessage = responseData.message || 'An error occurred.';
+      showModal('Error', errorMessage);
+    }
+} catch (error) {
+  console.error('Error sending form data:', error);
+  // Display error message to the user
+  console.error('Error sending form data:', error);
+    showModal('Server Error', 'An unexpected error occurred.');
+ 
+}
+});
+
+function isValidEmail(email) {
+  // Basic email validation
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+}
+
+function showModal(title, message) {
+  modalTitle.textContent = title;
+  modalBody.textContent = message;
+  const bootstrapModal = new bootstrap.Modal(notificationModal);
+  bootstrapModal.show();
+}
 </script>
+
     
   </body>
 </html>
