@@ -34,11 +34,32 @@
     <link rel="shortcut icon" href="./images/nse.jpg" type="image/x-icon">
   <style>
     .practice-area {
-      height: 350px;
-      /* border: 1px solid #ddd; */
-      padding: 20px;
-      margin-bottom: 20px;
+      height: 380px;
+      border: 2px solid #e9ecef;
+      padding: 25px;
+      margin-bottom: 25px;
       overflow: hidden;
+      background: #fff;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+      position: relative;
+      display: block !important;
+    }
+
+    .practice-area:hover {
+      box-shadow: 0 8px 25px rgba(111, 66, 193, 0.15);
+      transform: translateY(-5px);
+      border-color: #6f42c1;
+    }
+
+    .practice-area::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: #6f42c1;
     }
 
     .card {
@@ -46,23 +67,92 @@
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.2s, box-shadow 0.2s;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
+
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.card-body {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    color: #666;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.btn-primary {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+    .practice-area .icon {
+      margin-bottom: 20px;
+      width: 70px;
+      height: 70px;
+      background: #f8f9fa;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+      border: 2px solid #6f42c1;
+    }
+
+    .practice-area .icon span {
+      font-size: 35px;
+      color: #6f42c1;
+    }
+
     .practice-area h3 {
-      margin-top: 10px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .practice-area h3 a {
+      color: #2c3e50;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .practice-area h3 a:hover {
+      color: #6f42c1;
     }
 
     .practice-area p {
-      max-height: 150px;
+      max-height: 160px;
       overflow-y: auto;
-      margin-top: 10px;
-      padding-right: 20px; 
-      margin: 0px 0; 
-      text-align:center;
+      margin: 0;
+      padding-right: 15px;
+      text-align: center;
+      line-height: 1.6;
+      color: #666;
+      font-size: 14px;
     }
 
     .practice-area p::-webkit-scrollbar {
@@ -78,14 +168,50 @@
         font-weight: bold;
       }
 
-      .pagination-button {
+      /* Section Headers */
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+      position: relative;
+    }
+
+    .section-title h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: #6f42c1;
+      border-radius: 2px;
+    }
+
+    .section-title p {
+      font-size: 1.1rem;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .pagination-button {
             background-color: #6f42c1;
             color: #fff;
             border: 1px solid #6f42c1;
-            padding: 8px 20px;
+            padding: 10px 20px;
             margin: 0 5px;
             cursor: pointer;
             outline: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
         }
 
         .pagination-button:focus{
@@ -94,7 +220,8 @@
 
         .pagination-button:hover {
             background-color: #0056b3;
-            /* border-color: #181818; */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .pagination-button.active {
@@ -108,6 +235,15 @@
         }
 
         
+
+        /* Ensure proper display of practice areas */
+        #practiceAreasContainer .col-md-3 {
+          display: block !important;
+        }
+
+        #practiceAreasContainer .practice-area {
+          display: block !important;
+        }
 
         @media (max-width: 767.98px) {
   .practice-area {
@@ -221,7 +357,10 @@
     <!-- services -->
     <section class="ftco-section">
       <div class="container">
-        <h2 class="text-center mb-4">Our Practice Areas</h2>
+        <div class="section-title">
+          <h2>Our Practice Areas</h2>
+          <p>Comprehensive legal services across diverse practice areas with expertise and dedication</p>
+        </div>
         <div class="row no-gutters d-flex justify-content-center" id="practiceAreasContainer">
           <!-- page One -->
           <div class="col-md-3 text-center">
@@ -623,7 +762,10 @@
     
     <section class="ftco-section">
       <div class="container">
-        <h2 class="text-center mb-4">CORPORATE SERVICES</h2>
+        <div class="section-title">
+          <h2>Corporate Services</h2>
+          <p>Professional corporate solutions tailored to meet your business needs and legal requirements</p>
+        </div>
         <!-- Corporate Services content -->
         <div class="row">
     
@@ -980,14 +1122,18 @@
               return button;
           }
       
-          // Function to show practice areas for a specific page
-          function showPracticeAreas(page) {
-              const start = (page - 1) * itemsPerPage;
-              const end = start + itemsPerPage;
-              for (let i = 0; i < totalPracticeAreas; i++) {
-                  container.children[i].style.display = (i >= start && i < end) ? 'block' : 'none';
-              }
-          }
+           // Function to show practice areas for a specific page
+           function showPracticeAreas(page) {
+               const start = (page - 1) * itemsPerPage;
+               const end = start + itemsPerPage;
+               for (let i = 0; i < totalPracticeAreas; i++) {
+                   if (i >= start && i < end) {
+                       container.children[i].style.display = 'block';
+                   } else {
+                       container.children[i].style.display = 'none';
+                   }
+               }
+           }
       
           // Function to update the active button
           function updateActiveButton(activeButton) {
