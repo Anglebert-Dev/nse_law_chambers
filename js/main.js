@@ -1,300 +1,182 @@
- AOS.init({
- 	duration: 800,
- 	easing: 'slide'
- });
+/* NSE Law Chambers — main.js (vanilla JS, no dependencies) */
 
-(function($) {
+/* --- Page loader ------------------------------------------- */
+window.addEventListener('load', () => {
+  const loader = document.getElementById('page-loader');
+  if (loader) {
+    loader.classList.add('hidden');
+    setTimeout(() => loader.remove(), 600);
+  }
+});
 
-	"use strict";
+/* --- Navbar scroll behaviour ------------------------------- */
+const navbar = document.getElementById('navbar');
+if (navbar) {
+  const onScroll = () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+}
 
-	var isMobile = {
-		Android: function() {
-			return navigator.userAgent.match(/Android/i);
-		},
-			BlackBerry: function() {
-			return navigator.userAgent.match(/BlackBerry/i);
-		},
-			iOS: function() {
-			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-		},
-			Opera: function() {
-			return navigator.userAgent.match(/Opera Mini/i);
-		},
-			Windows: function() {
-			return navigator.userAgent.match(/IEMobile/i);
-		},
-			any: function() {
-			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-		}
-	};
-
-
-	$(window).stellar({
-    responsive: true,
-    parallaxBackgrounds: true,
-    parallaxElements: true,
-    horizontalScrolling: false,
-    hideDistantElements: false,
-    scrollProperty: 'scroll'
+/* --- Mobile nav toggle ------------------------------------- */
+const toggle = document.getElementById('nav-toggle');
+const drawer = document.getElementById('nav-drawer');
+if (toggle && drawer) {
+  toggle.addEventListener('click', () => {
+    const open = toggle.classList.toggle('open');
+    drawer.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    drawer.setAttribute('aria-hidden', String(!open));
   });
 
+  // Close drawer on link click
+  drawer.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      toggle.classList.remove('open');
+      drawer.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      drawer.setAttribute('aria-hidden', 'true');
+    });
+  });
+}
 
-	var fullHeight = function() {
-
-		$('.js-fullheight').css('height', $(window).height());
-		$(window).resize(function(){
-			$('.js-fullheight').css('height', $(window).height());
-		});
-
-	};
-	fullHeight();
-
-	// loader
-	var loader = function() {
-		setTimeout(function() { 
-			if($('#ftco-loader').length > 0) {
-				$('#ftco-loader').removeClass('show');
-			}
-		}, 1);
-	};
-	loader();
-
-	// Scrollax
-   $.Scrollax();
-
-	var carousel = function() {
-		$('.carousel-testimony').owlCarousel({
-			center: true,
-			loop: true,
-			items:1,
-			margin: 30,
-			stagePadding: 0,
-			nav: false,
-			navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
-			responsive:{
-				0:{
-					items: 1
-				},
-				600:{
-					items: 2
-				},
-				1000:{
-					items: 3
-				}
-			}
-		});
-
-
-	};
-	carousel();
-
-	$('nav .dropdown').hover(function(){
-		var $this = $(this);
-		// 	 timer;
-		// clearTimeout(timer);
-		$this.addClass('show');
-		$this.find('> a').attr('aria-expanded', true);
-		// $this.find('.dropdown-menu').addClass('animated-fast fadeInUp show');
-		$this.find('.dropdown-menu').addClass('show');
-	}, function(){
-		var $this = $(this);
-			// timer;
-		// timer = setTimeout(function(){
-			$this.removeClass('show');
-			$this.find('> a').attr('aria-expanded', false);
-			// $this.find('.dropdown-menu').removeClass('animated-fast fadeInUp show');
-			$this.find('.dropdown-menu').removeClass('show');
-		// }, 100);
-	});
-
-
-	$('#dropdown04').on('show.bs.dropdown', function () {
-	  console.log('show');
-	});
-
-	// scroll
-	var scrollWindow = function() {
-		$(window).scroll(function(){
-			var $w = $(this),
-					st = $w.scrollTop(),
-					navbar = $('.ftco_navbar'),
-					sd = $('.js-scroll-wrap');
-
-			if (st > 150) {
-				if ( !navbar.hasClass('scrolled') ) {
-					navbar.addClass('scrolled');	
-				}
-			} 
-			if (st < 150) {
-				if ( navbar.hasClass('scrolled') ) {
-					navbar.removeClass('scrolled sleep');
-				}
-			} 
-			if ( st > 350 ) {
-				if ( !navbar.hasClass('awake') ) {
-					navbar.addClass('awake');	
-				}
-				
-				if(sd.length > 0) {
-					sd.addClass('sleep');
-				}
-			}
-			if ( st < 350 ) {
-				if ( navbar.hasClass('awake') ) {
-					navbar.removeClass('awake');
-					navbar.addClass('sleep');
-				}
-				if(sd.length > 0) {
-					sd.removeClass('sleep');
-				}
-			}
-		});
-	};
-	scrollWindow();
-
-	var isMobile = {
-		Android: function() {
-			return navigator.userAgent.match(/Android/i);
-		},
-			BlackBerry: function() {
-			return navigator.userAgent.match(/BlackBerry/i);
-		},
-			iOS: function() {
-			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-		},
-			Opera: function() {
-			return navigator.userAgent.match(/Opera Mini/i);
-		},
-			Windows: function() {
-			return navigator.userAgent.match(/IEMobile/i);
-		},
-			any: function() {
-			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-		}
-	};
-
-	var counter = function() {
-		
-		$('#section-counter, .hero-wrap, .ftco-counter').waypoint( function( direction ) {
-
-			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
-
-				var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
-				$('.number').each(function(){
-					var $this = $(this),
-						num = $this.data('number');
-						console.log(num);
-					$this.animateNumber(
-					  {
-					    number: num,
-					    numberStep: comma_separator_number_step
-					  }, 7000
-					);
-				});
-				
-			}
-
-		} , { offset: '95%' } );
-
-	}
-	counter();
-
-
-	var contentWayPoint = function() {
-		var i = 0;
-		$('.ftco-animate').waypoint( function( direction ) {
-
-			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
-				
-				i++;
-
-				$(this.element).addClass('item-animate');
-				setTimeout(function(){
-
-					$('body .ftco-animate.item-animate').each(function(k){
-						var el = $(this);
-						setTimeout( function () {
-							var effect = el.data('animate-effect');
-							if ( effect === 'fadeIn') {
-								el.addClass('fadeIn ftco-animated');
-							} else if ( effect === 'fadeInLeft') {
-								el.addClass('fadeInLeft ftco-animated');
-							} else if ( effect === 'fadeInRight') {
-								el.addClass('fadeInRight ftco-animated');
-							} else {
-								el.addClass('fadeInUp ftco-animated');
-							}
-							el.removeClass('item-animate');
-						},  k * 50, 'easeInOutExpo' );
-					});
-					
-				}, 100);
-				
-			}
-
-		} , { offset: '95%' } );
-	};
-	contentWayPoint();
-
-
-	// navigation
-	var OnePageNav = function() {
-		$(".smoothscroll[href^='#'], #ftco-nav ul li a[href^='#']").on('click', function(e) {
-		 	e.preventDefault();
-
-		 	var hash = this.hash,
-		 			navToggler = $('.navbar-toggler');
-		 	$('html, body').animate({
-		    scrollTop: $(hash).offset().top
-		  }, 700, 'easeInOutExpo', function(){
-		    window.location.hash = hash;
-		  });
-
-
-		  if ( navToggler.is(':visible') ) {
-		  	navToggler.click();
-		  }
-		});
-		$('body').on('activate.bs.scrollspy', function () {
-		  console.log('nice');
-		})
-	};
-	OnePageNav();
-
-
-	// magnific popup
-	$('.image-popup').magnificPopup({
-    type: 'image',
-    closeOnContentClick: true,
-    closeBtnInside: false,
-    fixedContentPos: true,
-    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
-     gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-    },
-    image: {
-      verticalFit: true
-    },
-    zoom: {
-      enabled: true,
-      duration: 300 // don't foget to change the duration also in CSS
+/* --- Scroll reveal (replaces AOS + Waypoints + animate.css) */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('revealed');
+      revealObserver.unobserve(entry.target);
     }
   });
+}, { threshold: 0.12 });
 
-  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-    disableOn: 700,
-    type: 'iframe',
-    mainClass: 'mfp-fade',
-    removalDelay: 160,
-    preloader: false,
+document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
 
-    fixedContentPos: false
+/* --- Footer year ------------------------------------------ */
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+/* --- Form helper ------------------------------------------ */
+const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function validate(fields) {
+  let valid = true;
+  fields.forEach(({ input, error, check }) => {
+    const ok = check(input.value.trim());
+    input.classList.toggle('invalid', !ok);
+    error.classList.toggle('visible', !ok);
+    if (!ok) valid = false;
   });
+  return valid;
+}
 
+async function submitForm(formId, statusId, fields, submitId) {
+  const form   = document.getElementById(formId);
+  const status = document.getElementById(statusId);
+  const submit = document.getElementById(submitId);
+  if (!form) return;
 
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
+    // Clear previous status
+    status.className = 'form-status';
+    status.textContent = '';
 
-})(jQuery);
+    if (!validate(fields)) return;
 
+    const originalText = submit.textContent;
+    submit.disabled = true;
+    submit.textContent = 'Sending…';
+
+    try {
+      const data = new FormData(form);
+      const res  = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data,
+      });
+      const json = await res.json();
+
+      if (json.success) {
+        status.className = 'form-status success';
+        status.textContent = 'Thank you — your message has been sent. We will be in touch shortly.';
+        form.reset();
+        fields.forEach(({ input, error }) => {
+          input.classList.remove('invalid');
+          error.classList.remove('visible');
+        });
+      } else {
+        throw new Error(json.message || 'Submission failed');
+      }
+    } catch {
+      status.className = 'form-status error-msg';
+      status.textContent = 'Something went wrong. Please email us directly at nselawchambers@gmail.com';
+    } finally {
+      submit.disabled = false;
+      submit.textContent = originalText;
+    }
+  });
+}
+
+/* --- Consult form ------------------------------------------ */
+submitForm('consult-form', 'consult-status', [
+  {
+    input: document.getElementById('consult-name'),
+    error: document.getElementById('consult-name-error'),
+    check: v => v.length > 0,
+  },
+  {
+    input: document.getElementById('consult-email'),
+    error: document.getElementById('consult-email-error'),
+    check: v => emailRe.test(v),
+  },
+  {
+    input: document.getElementById('consult-matter'),
+    error: document.getElementById('consult-matter-error'),
+    check: v => v.length > 0,
+  },
+], 'consult-submit');
+
+/* --- Contact form ------------------------------------------ */
+submitForm('contact-form', 'contact-status', [
+  {
+    input: document.getElementById('contact-name'),
+    error: document.getElementById('contact-name-error'),
+    check: v => v.length > 0,
+  },
+  {
+    input: document.getElementById('contact-email'),
+    error: document.getElementById('contact-email-error'),
+    check: v => emailRe.test(v),
+  },
+  {
+    input: document.getElementById('contact-subject'),
+    error: document.getElementById('contact-subject-error'),
+    check: v => v.length > 0,
+  },
+  {
+    input: document.getElementById('contact-message'),
+    error: document.getElementById('contact-message-error'),
+    check: v => v.length > 0,
+  },
+], 'contact-submit');
+
+/* --- Practice area filter (practice-areas.html) ----------- */
+const filterBtns = document.querySelectorAll('.practice-filter__btn');
+const practiceCards = document.querySelectorAll('.practice-page-card');
+
+if (filterBtns.length && practiceCards.length) {
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cat = btn.dataset.filter;
+      practiceCards.forEach(card => {
+        const show = cat === 'all' || card.dataset.category === cat;
+        card.style.display = show ? '' : 'none';
+      });
+    });
+  });
+}

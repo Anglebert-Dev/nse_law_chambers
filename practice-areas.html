@@ -1,1167 +1,383 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>NSE LAW CHAMBERS - Services</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practice Areas — NSE Law Chambers</title>
+  <meta name="description" content="NSE Law Chambers offers 24+ practice areas including litigation, corporate law, intellectual property, family law, and more across Rwanda." />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
-    <link rel="stylesheet" href="css/animate.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="images/nse.jpg" type="image/jpeg" />
+</head>
+<body>
 
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="css/magnific-popup.css" />
+<!-- PAGE LOADER -->
+<div id="page-loader" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+  </svg>
+</div>
 
-    <link rel="stylesheet" href="css/aos.css" />
-
-    <link rel="stylesheet" href="css/ionicons.min.css" />
-
-    <link rel="stylesheet" href="css/flaticon.css" />
-    <link rel="stylesheet" href="css/icomoon.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" href="./images/nse.jpg" type="image/x-icon">
-  <style>
-    .practice-area {
-      height: 380px;
-      border: 2px solid #e9ecef;
-      padding: 25px;
-      margin-bottom: 25px;
-      overflow: hidden;
-      background: #fff;
-      transition: all 0.3s ease;
-      border-radius: 8px;
-      position: relative;
-      display: block !important;
-    }
-
-    .practice-area:hover {
-      box-shadow: 0 8px 25px rgba(111, 66, 193, 0.15);
-      transform: translateY(-5px);
-      border-color: #6f42c1;
-    }
-
-    .practice-area::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: #6f42c1;
-    }
-
-    .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.2s, box-shadow 0.2s;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card-body {
-    padding: 20px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.card-title {
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.card-text {
-    color: #666;
-    line-height: 1.5;
-    flex-grow: 1;
-}
-
-.btn-primary {
-    background-color: #6f42c1;
-    border-color: #6f42c1;
-}
-
-.btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
-}
-
-    .practice-area .icon {
-      margin-bottom: 20px;
-      width: 70px;
-      height: 70px;
-      background: #f8f9fa;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-left: auto;
-      margin-right: auto;
-      border: 2px solid #6f42c1;
-    }
-
-    .practice-area .icon span {
-      font-size: 35px;
-      color: #6f42c1;
-    }
-
-    .practice-area h3 {
-      margin-top: 15px;
-      margin-bottom: 15px;
-      font-weight: bold;
-      font-size: 18px;
-      line-height: 1.3;
-    }
-
-    .practice-area h3 a {
-      color: #2c3e50;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .practice-area h3 a:hover {
-      color: #6f42c1;
-    }
-
-    .practice-area p {
-      max-height: 160px;
-      overflow-y: auto;
-      margin: 0;
-      padding-right: 15px;
-      text-align: center;
-      line-height: 1.6;
-      color: #666;
-      font-size: 14px;
-    }
-
-    .practice-area p::-webkit-scrollbar {
-      width: 0;
-      background-color: transparent;
-    }
-    html {
-    scroll-behavior: smooth;
-}
-    
-    .span {
-        color: #6f42c1;
-        font-weight: bold;
-      }
-
-      /* Section Headers */
-    .section-title {
-      text-align: center;
-      margin-bottom: 50px;
-      position: relative;
-    }
-
-    .section-title h2 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: #2c3e50;
-      margin-bottom: 15px;
-      position: relative;
-    }
-
-    .section-title h2::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 3px;
-      background: #6f42c1;
-      border-radius: 2px;
-    }
-
-    .section-title p {
-      font-size: 1.1rem;
-      color: #666;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .pagination-button {
-            background-color: #6f42c1;
-            color: #fff;
-            border: 1px solid #6f42c1;
-            padding: 10px 20px;
-            margin: 0 5px;
-            cursor: pointer;
-            outline: none;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-
-        .pagination-button:focus{
-          outline: none;
-        }
-
-        .pagination-button:hover {
-            background-color: #0056b3;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .pagination-button.active {
-            background-color: #0056b3;
-            border-color: #0056b3;
-            color: #fff;
-        }
-
-        h3, .card-title{
-          font-weight: bold;
-        }
-
-        
-
-        /* Ensure proper display of practice areas */
-        #practiceAreasContainer .col-md-3 {
-          display: block !important;
-        }
-
-        #practiceAreasContainer .practice-area {
-          display: block !important;
-        }
-
-        @media (max-width: 767.98px) {
-  .practice-area {
-    border-left: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    height: auto; 
-    padding: 20px; 
-  }
-
-  .practice-area p {
-    max-height: none;
-    overflow-y: visible;
-    margin-top: 10px;
-    padding-right: 0;
-  }
-
-  .practice-area p::-webkit-scrollbar {
-    display: none;
-  }
-
-  .practice-area p {
-    margin-top: 10px;
-    padding-right: 0;
-    margin-bottom: 0; 
-    text-align:initial;
-  }
-
-}
-.p{
-  text-align:left;
-}
-
-  </style>
-  <body>
-    <nav
-      class="navbar px-md-0 navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
-      id="ftco-navbar"
-    >
-      <div class="container-fluid px-md-5">
-        <a class="navbar-brand" href="index.html"
-          >NSE <span class="span">LAW CHAMBERS</span></a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#ftco-nav"
-          aria-controls="ftco-nav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="oi oi-menu"></span> Menu
-        </button>
-        
-        <div class="collapse navbar-collapse" id="ftco-nav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a href="#home" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="#about" class="nav-link">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a href="#services" class="nav-link">Services</a>
-            </li>
-            <li class="nav-item">
-              <a href="#case" class="nav-link">Case Studies</a>
-            </li>
-            <li class="nav-item">
-              <a href="#consultation" class="nav-link">Consultation</a>
-            </li>
-            <li class="nav-item">
-              <a href="#contact" class="nav-link">Contact Us</a>
-            </li>
-          </ul>
-        </div>
+<!-- NAVBAR -->
+<nav class="navbar scrolled" id="navbar">
+  <div class="navbar__inner">
+    <a href="index.html" class="navbar__logo" aria-label="NSE Law Chambers — Home">
+      <div class="navbar__logo-text">
+        NSE Law Chambers
+        <span>Attorneys &amp; Counsellors</span>
       </div>
-    </nav>
-    <!-- END nav -->
+    </a>
+    <ul class="navbar__links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="practice-areas.html" class="active">Practice Areas</a></li>
+      <li><a href="team.html">Our Team</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <a href="index.html#contact" class="navbar__cta">Get Legal Advice</a>
+    <button class="navbar__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
 
-    <section
-      class="hero-wrap hero-wrap-2"
-      style="background-image: url('images/bg_1.jpg'); height: 100vh"
-      data-stellar-background-ratio="0.5"
-    >
-      <div class="overlay"></div>
-      <div class="container">
-        <div
-          class="row no-gutters slider-text align-items-end justify-content-center"
-        >
-          <div class="col-md-9 ftco-animate pb-5 text-center">
-            <h1 class="mb-3 bread">Services</h1>
-            <p style="font-size: 15px; color: #fff">
-              NSE LAW CHAMBERS offers a wide range of legal services covering
-              different law domains dominated by administrative and public law,
-              company law, commercial law, mergers and acquisitions, tax law,
-              labor law, criminal law. In all domains, the following may attract
-              the attention of your institution
-            </p>
-            <p class="breadcrumbs">
-              <span class="mr-2"
-                ><a href="index.html"
-                  >Home <i class="ion-ios-arrow-forward"></i></a
-              ></span>
-              <span>Services <i class="ion-ios-arrow-forward"></i></span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- services -->
-    <section class="ftco-section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Our Practice Areas</h2>
-          <p>Comprehensive legal services across diverse practice areas with expertise and dedication</p>
-        </div>
-        <div class="row no-gutters d-flex justify-content-center" id="practiceAreasContainer">
-          <!-- page One -->
-          <div class="col-md-3 text-center">
-            <div class="practice-area border-b no-border-l ftco-animate">
-              <div
-                class="icon d-flex justify-content-center align-items-center"
-              >
-                <span class="flaticon-family"></span>
-              </div>
-              <h3>
-                <a href="#" style="font-size: 19px"
-                  >Construction,Energy and Infrastructures Disputes</a
-                >
-              </h3>
-              <p>
-                We represent construction, mining and telecommunication
-                companies in cases relating to contracts of construction,
-                mining, infrastructure diffusion, telecommunication and
-                aviation. We help parties to transact about potential and
-                existing disputes in any of those sectors and in case of failure
-                of compromise, our clients' interests are well defended before
-                courts.
-              </p>
-            </div>
-          </div>
+<div class="navbar__drawer" id="nav-drawer" aria-hidden="true">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="practice-areas.html">Practice Areas</a>
+  <a href="team.html">Our Team</a>
+  <a href="index.html#contact">Contact</a>
+</div>
 
-          <div class="col-md-3 text-center">
-            <div class="practice-area border-b ftco-animate">
-              <div
-                class="icon d-flex justify-content-center align-items-center"
-              >
-                <span class="flaticon-auction"></span>
-              </div>
-              <h3><a href="#"> Criminal Defence</a></h3>
-              <p>
-                With our advocates specialized in criminal law and experienced
-                in criminal procedures, we follow up all criminal cases from the
-                first early step, before the judicial police (Rwanda
-                Investigation Bureau/RIB), the prosecution and assist clients
-                before first instance courts to the last competent jurisdiction.
-                This involves also visiting regularly our detained clients in
-                different detention centres/prisons to make them aware of how
-                far their cases have reached and requesting for them dates of
-                trial in the different jurisdictions. We also make sure that our
-                clients legal rights are respected by all judicial organs.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-3 text-center">
-            <div class="practice-area border-b ftco-animate">
-              <div
-                class="icon d-flex justify-content-center align-items-center"
-              >
-                <span class="flaticon-shield"></span>
-              </div>
-              <h3><a href="#">Civil Litigation</a></h3>
-              <p>
-                As opposed to criminal litigations where repression is the main
-                purpose of the procedures, civil litigations are aimed at
-                recovering monetary benefits offended during transactions
-                between different people. We have expertise in dealing with
-                contractual and quasicontractual litigations. We
-                represent/assist litigants before courts in proceedings relating
-                to contractual obligations, tort liability and extracontractual
-                obligations like management of other person's affairs by which
-                the Court's determination of an obligation of one party to
-                another is requested where no actual contract exists between
-                them.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-3 text-center">
-            <div class="practice-area border-b ftco-animate">
-              <div
-                class="icon d-flex justify-content-center align-items-center"
-              >
-                <span class="flaticon-handcuffs"></span>
-              </div>
-              <h3>
-                <a href="#">Family Law </a>
-              </h3>
-              <p>
-                We have well trained and experienced Family Lawyers helping
-                litigants to solve family-related disputes like marriage related
-                litigations, matrimonial regimes, divorce, adoption, civil
-                status documents, donations, successions, etc. We have a team
-                specialized in family mediation helping different family members
-                to have an understanding before cases go out for courts. We
-                focus to reunite families and have their disputes solved in a
-                win win situation to keep the family relationships.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-3 text-center">
-            <div class="practice-area border-b no-border-l ftco-animate">
-              <div
-                class="icon d-flex justify-content-center align-items-center"
-              >
-                <span class="flaticon-house"></span>
-              </div>
-              <h3>
-                <a href="#"
-                  >Constitutional Law and Human Rights</a
-                >
-              </h3>
-              <p>
-                We represent/assist before courts and other decision making
-                organs victims of infringements on constitutional provisions and
-                human rights. We have an agreement with the National Commission
-                for Human Rights (NCHR) to handle human rights cases assigned to
-                the Law Firm by the Commission.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-3 text-center">
-            <div class="practice-area border-b ftco-animate">
-              <div
-                class="icon d-flex justify-content-center align-items-center"
-              >
-                <span class="flaticon-employee"></span>
-              </div>
-              <h3><a href="#">Land and Property Law</a></h3>
-              <p>
-                The Law Firm represents land and property owners in cases
-                brought before courts or other organs aimed at protecting their
-                rights over land or other immovable properties. We assist
-                parties for any disputes relating to various forms of ownership
-                and tenancy in real property.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-3 text-center">
-            <div class="practice-area border-b ftco-animate">
-              <div
-                class="icon d-flex justify-content-center align-items-center"
-              >
-                <span class="flaticon-medicine"></span>
-              </div>
-              <h3><a href="#">Taxation Matters</a></h3>
-              <p>
-                We handle all taxation law related cases for small, large
-                businesses and corporations. We follow up all tax law compliance
-                matters for the company and assist/represent them before tax
-                authorities (RRA) for different tax procedures and before courts
-                where cases are brought to courts for determination by or
-                against our clients
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-3 text-center">
-            <div class="practice-area border-b ftco-animate">
-              <div
-                class="icon d-flex justify-content-center align-items-center"
-              >
-                <span class="flaticon-money"></span>
-              </div>
-              <h3>
-                <a href="#"
-                  >Intellectual Property Litigation</a
-                >
-              </h3>
-              <p>
-                We assist / represent our clients during settlement of disputes
-                relating to violation of their IP rights before all organs of
-                dispute settlement or claims against alleged violation of
-                others' intellectual property and technological rights. We help
-                to handle cases before administrative organs on different
-                notices relating to IT rights, and all cases before courts of
-                law and related damages. We warranty integral representation
-              </p>
-            </div>
-          </div>
-
-          <!-- page 2  -->
-          <!-- Insurance Law -->
-          <div class="col-md-3 text-center">
-            <div class="practice-area border-b no-border-l ftco-animate">
-                <div class="icon d-flex justify-content-center align-items-center">
-                    <span class="flaticon-family"></span>
-                </div>
-                <h3>
-                    <a href="#">Insurance Law</a>
-                </h3>
-                <p>
-                    With our Attorneys specialized in insurance law, we handle all cases relating to responsibilities resulting from insurance contracts and injuries caused by insured parties. We also represent clients during negotiation and conclusion of insurance policies. This covers many segments including but not limited to Life Insurance, road traffic Accidents, Cargo and Services Insurance, Travel Insurance, etc.
-                </p>
-            </div>
-        </div>
-
-        <!-- Commercial Law -->
-        <div class="col-md-3 text-center">
-            <div class="practice-area border-b ftco-animate">
-                <div class="icon d-flex justify-content-center align-items-center">
-                    <span class="flaticon-auction"></span>
-                </div>
-                <h3><a href="#">Commercial Law</a></h3>
-                <p>
-                    At our Law Firm, we have expertise in business and commercial law which are two areas of legal practice that have so many overlapping issues requiring knowledge and experience. We represent /assist clients before commercial courts at all levels in disputes relating to commercial transactions. We ensure fully integrated legal representation that guarantees sustainability of the business of different players serviced by our law firm.
-                </p>
-            </div>
-        </div>
-
-        <!-- Conciliation and Mediation -->
-        <div class="col-md-3 text-center">
-            <div class="practice-area border-b ftco-animate">
-                <div class="icon d-flex justify-content-center align-items-center">
-                    <span class="flaticon-shield"></span>
-                </div>
-                <h3><a href="#">Conciliation and Mediation</a></h3>
-                <p>
-                    We assist and represent our clients in dispute resolution process in which an independent third party (mediator and conciliator) helps disputants to settle a conflict in a mutually acceptable fashion and avoid to further go to binding mechanisms of dispute settlement. With this process, we ensure that relationships between disputing parties are not affected as the process aims at settling the dispute while safeguarding mutual understanding and long term relationship/friendship of the parties.
-                </p>
-            </div>
-        </div>
-
-        <!-- Adjudication -->
-        <div class="col-md-3 text-center">
-            <div class="practice-area border-b ftco-animate">
-                <div class="icon d-flex justify-content-center align-items-center">
-                    <span class="flaticon-handcuffs"></span>
-                </div>
-                <h3><a href="#">Adjudication</a></h3>
-                <p>
-                    We represent clients in procedures of adjudication which is the legal process by which an appointed expert reviews evidences and argumentation, including legal reasoning set forth by opposing parties or litigants to come to a decision which determines rights and obligations between the parties involved. This procedure is most popular in construction and infrastructure litigations where parties want someone who understands the matter at hand and determines what should be done by each of the disputing parties.
-                </p>
-            </div>
-        </div>
-
-        <!-- Legal opinions -->
-        <div class="col-md-3 text-center">
-            <div class="practice-area border-b no-border-l ftco-animate">
-                <div class="icon d-flex justify-content-center align-items-center">
-                    <span class="flaticon-house"></span>
-                </div>
-                <h3><a href="#">Legal Opinions</a></h3>
-                <p>
-                    For different matters in different domains of law submitted to us by clients, we provide written legal opinions in which we analyze facts pertaining the cases, extract legal issues requiring attention, provide legal sources that may help to motivate the case and finally provide our legal opinion to clients. Many clients have appreciated our contribution that helped them to take informed decisions with all necessary legal benchmarks.
-                </p>
-            </div>
-        </div>
-
-        <!-- Legal advisory -->
-        <div class="col-md-3 text-center">
-            <div class="practice-area border-b ftco-animate">
-                <div class="icon d-flex justify-content-center align-items-center">
-                    <span class="flaticon-medicine"></span>
-                </div>
-                <h3><a href="#">Legal Advisory</a></h3>
-                <p>
-                    For existing cases or newly projects to be initiated by the clients, we hold consultation meetings with clients aimed at assessing the proposed way of doing something, and provide legal advice on what should be done at any stage to avoid violation of laws that may lead to troubles. For a better client’s legal orientation, we deploy an experienced lawyer in the domain of the client’s interest.
-                </p>
-            </div>
-        </div>
-
-        <!-- Trade secret -->
-        <div class="col-md-3 text-center">
-            <div class="practice-area border-b ftco-animate">
-                <div class="icon d-flex justify-content-center align-items-center">
-                    <span class="flaticon-employee"></span>
-                </div>
-                <h3><a href="#">Trade Secret</a></h3>
-                <p>
-                    Our Intellectual Property department help clients to register and protect their trade secrets considered in a general sense, as confidential information that has commercial value. Upon registration, any user has to be authorized by the owner of the secret.
-                </p>
-            </div>
-        </div>
-
-        <!-- Copyright -->
-        <div class="col-md-3 text-center">
-            <div class="practice-area border-b ftco-animate">
-                <div class="icon d-flex justify-content-center align-items-center">
-                    <span class="flaticon-money"></span>
-                </div>
-                <h3><a href="#">Copyright</a></h3>
-                <p>
-                    We help clients in protection of their Copyright in a form of legal protection granted to the authors of original creative works. Under this domain, we cover a number of subject matters, including literary works, musical works, dramatic works, pantomimes and choreographic works, architectural works, pictorial, graphic, and sculptural works, motion pictures and other audio-visual works, Sound recordings and Computer programs.
-                </p>
-            </div>
-        </div>
-        <!-- Trademark -->
-<div class="col-md-3 text-center">
-  <div class="practice-area border-b no-border-l ftco-animate">
-      <div class="icon d-flex justify-content-center align-items-center">
-        <span class="flaticon-auction"></span>
-      </div>
-      <h3>
-          <a href="#" style="font-size: 19px">Trademark</a>
-      </h3>
-      <p>
-          With trademarks, we help clients in registration and protection of a word, phrase,
-          symbol or design or a combination of any of these that serves to identify and
-          distinguish a specific product or service from others in the marketplace.
-      </p>
+<!-- PAGE HERO -->
+<div class="page-hero" style="background-image: url('images/bg_2.jpg');">
+  <div class="page-hero__overlay"></div>
+  <div class="container">
+    <div class="page-hero__content">
+      <nav class="page-hero__breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span>Practice Areas</span>
+      </nav>
+      <h1>Practice Areas</h1>
+    </div>
   </div>
 </div>
 
-<!-- Geographical Indication -->
-<div class="col-md-3 text-center">
-  <div class="practice-area border-b ftco-animate">
-      <div class="icon d-flex justify-content-center align-items-center">
-        <span class="flaticon-house"></span>
-      </div>
-      <h3><a href="#">Geographical Indication</a></h3>
-      <p>
-          We support clients in registering and protecting their Geographical indications (or
-          GIs, as they are commonly called) treated as a subset of trademarks in some
-          jurisdictions. This enables business actors to identify a good or service as originating
-          in a place, region, or locality where a given quality, reputation, or other characteristic
-          of the good is essentially attributable to its geographic origin.
-      </p>
-  </div>
-</div>
-<div class="col-md-3 text-center">
-  <div class="practice-area border-b ftco-animate">
-      <div class="icon d-flex justify-content-center align-items-center">
-        <span class="flaticon-handcuffs"></span>
-      </div>
-      <h3><a href="#" style="font-size: 19px;">Software and Technological Creations Protection</a></h3>
-      <p>
-          Technological and software creations are utmost sources of welfare but if they are let
-          for free use, owners will not have any consideration or counterpart of their efforts
-          and knowledge. At our Law Firm, the IPT Department helps Software creators to
-          register and protect their rights for making money.
-      </p>
-  </div>
-</div>
+<!-- PRACTICE AREAS GRID -->
+<section class="section">
+  <div class="container">
+    <p class="section-label" data-reveal>What We Handle</p>
+    <h2 data-reveal>Comprehensive Legal Services</h2>
+    <p class="section-intro" data-reveal>Our attorneys bring focused expertise across more than 24 areas of law. Use the filters below to find what you need, or browse the full list.</p>
 
-<!-- Patent -->
-<div class="col-md-3 text-center">
-  <div class="practice-area border-b ftco-animate">
-      <div class="icon d-flex justify-content-center align-items-center">
-        <span class="flaticon-family"></span>
-      </div>
-      <h3><a href="#">Patent</a></h3>
-      <p>
-          With patents, we help the clients in approaching the Government requesting grant
-          of a property right that permits an inventor to exclude others from making, using,
-          selling, offering for sale, or importing their inventions. Many inventors have made
-          much wealth not only because they invented something but also because they had
-          been able to exclude all others from misusing their rights.
-      </p>
-  </div>
-</div>
-
-
-
-<!-- e-Commerce -->
-
-<div class="col-md-3 text-center">
-  <div class="practice-area border-b ftco-animate">
-      <div class="icon d-flex justify-content-center align-items-center">
-        <span class="flaticon-employee"></span>
-      </div>
-      <h3><a href="#" >e-Commerce</a></h3>
-      <p>
-        We assist clients in their electronic commercial transactions by playing an
-        intermediary role in dealing with their business counterpart that is in a distance
-        restricting them from holding regular meetings or physically meet to conduct some
-        transactions. We follow up execution of electronic orders and help in solving possible
-        legal disputes.
-      </p>
-  </div>
-</div>
-
-<!-- Software and Technological creations protection -->
-
-
-<!-- Cyber Law -->
-<div class="col-md-3 text-center">
-  <div class="practice-area border-b ftco-animate">
-      <div class="icon d-flex justify-content-center align-items-center">
-        <span class="flaticon-money"></span>
-      </div>
-      <h3>
-          <a href="#">Cyber Law</a>
-      </h3>
-      <p>
-          The emergence of internet and technology of a business tool gave rise to cyber law to
-          regulate related transactions. Our Intellectual Property and Technology department
-          master different aspects of cyber transactions and helps clients to avoid risks of cyber
-          criminals and loss generated by cyber transactions.
-      </p>
-  </div>
-</div>
-</div>
-         <!-- Pagination buttons -->
-        <div class="row justify-content-center mt-4" id="paginationButtons">
-        </div>
-      </div>
-    </section>
-
-
-    
-    <section class="ftco-section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Corporate Services</h2>
-          <p>Professional corporate solutions tailored to meet your business needs and legal requirements</p>
-        </div>
-        <!-- Corporate Services content -->
-        <div class="row">
-    
-          <!-- Directorship services card -->
-          <div class="col-md-4 mt-3">
-            <div class="card" style="height: 290px;">
-              <div class="card-body">
-                <h5 class="card-title">Directorship Services</h5>
-                <p class="card-text">
-                  The law firm provides directorship services to private companies both local and foreign...
-                </p>
-              <div style="margin-top:60px ;">
-                  <a href="index.html#contact" class="btn btn-primary">More Information</a>
-              </div>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Trusts and Investment Funds card -->
-          <div class="col-md-4 mt-3">
-            <div class="card" style="height: 290px;">
-              <div class="card-body">
-                <h5 class="card-title">Trusts and Investment Funds</h5>
-                <p class="card-text">
-                  The law firm provides trustee services to various individuals interested in creating trust funds...
-                </p>
-              <div style="margin-top:60px ;">
-                  <a href="index.html#contact" class="btn btn-primary">More Information</a>
-              </div>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Company Secretary services card -->
-          <div class="col-md-4 mt-3">
-            <div class="card" style="height: 290px;">
-              <div class="card-body">
-                <h5 class="card-title">Company Secretary Services</h5>
-                <p class="card-text">
-                  We deliver a number of services including maintaining the company’s statutory books
-                  
-                </p>
-              <div style="margin-top:60px ;">
-                  <a href="index.html#contact" class="btn btn-primary">More Information</a>
-              </div>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Corporate restructuring card -->
-          <div class="col-md-4 mt-3">
-            <div class="card" style="height: 290px;">
-              <div class="card-body">
-                <h5 class="card-title">Corporate Restructuring</h5>
-                <p class="card-text">
-                  We assist local and multinational companies to increase consolidation and competition...
-                </p>
-              <div style="margin-top:60px ;">
-                  <a href="index.html#contact" class="btn btn-primary">More Information</a>
-              </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 mt-3">
-            <div class="card" style="height: 290px;">
-              <div class="card-body">
-                <h5 class="card-title">Drafting Articles of Association</h5>
-                <p class="card-text">
-                  Drafting Articles of Association
-                  Basing on the governance...
-                </p>
-              <div style="margin-top:60px ;">
-                  <a href="index.html#contact" class="btn btn-primary">More Information</a>
-              </div>
-              </div>
-            </div>
-          </div>
-     
-              <!-- Company and Business registration card -->
-          <div class="col-md-4 mt-3">
-            <div class="card" style="height: 290px;">
-              <div class="card-body">
-                <h5 class="card-title">Company and Business Registration</h5>
-                <p class="card-text">
-                  We have a special department dealing with incorporation of any...
-                </p>
-              <div style="margin-top:60px ;">
-                  <a href="index.html#contact" class="btn btn-primary">More Information</a>
-              </div>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Merger and Acquisition card -->
-          <div class="col-md-4 mt-3">
-            <div class="card" style="height: 290px;">
-              <div class="card-body">
-                <h5 class="card-title">Merger and Acquisition</h5>
-                <p class="card-text">
-                  Two or more businesses may decide to merge, or one acquires the other for improving their business...
-                </p>
-              <div style="margin-top:60px ;">
-                  <a href="index.html#contact" class="btn btn-primary">More Information</a>
-              </div>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Shareholders Dispute Resolution card -->
-          <div class="col-md-4 mt-3">
-            <div class="card" style="height: 290px;">
-              <div class="card-body">
-                <h5 class="card-title">Shareholders Dispute Resolution</h5>
-                <p class="card-text">
-                  With our expertise in corporate law, we advise the parties in settlement...
-                </p>
-              <div style="margin-top:60px ;">
-                  <a href="index.html#contact" class="btn btn-primary">More Information</a>
-              </div>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Joint Venture Deals card -->
-          <div class="col-md-4 mt-3">
-            <div class="card" style="height: 290px;">
-              <div class="card-body">
-                <h5 class="card-title">Joint Venture Deals</h5>
-                <p class="card-text">
-                  It happens more often in business that more than one company join hands to execute a project or compete...
-                </p>
-              <div style="margin-top:60px ;">
-                  <a href="index.html#contact" class="btn btn-primary">More Information</a>
-              </div>
-              </div>
-            </div>
-          </div>
-    
-          <!-- Add more cards for each service as needed -->
-    
-        </div>
-        <!-- End of Corporate Services content -->
-    
-      </div>
-    </section>
-
-    <footer class="ftco-footer ftco-bg-dark ftco-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2" style="font-size: 17px">
-                About NSE <span class="span">LAW CHAMBERS</span>
-              </h2>
-              <p class="p">
-                NSE LAW CHAMBERS offers a wide range of legal services covering
-                different law domains dominated by administrative and public
-                law, company law, commercial law, mergers and acquisitions, tax
-                law, labor law, criminal law. In all domains, the following may
-                attract the attention of your institution
-              </p>
-              <ul
-                class="ftco-footer-social list-unstyled float-md-left float-lft mt-5"
-              >
-                <li class="ftco-animate">
-                  <a href="#"><span class="icon-envelope"></span></a>
-                </li>
-                <li class="ftco-animate">
-                  <a href="#"><span class="icon-facebook"></span></a>
-                </li>
-                <li class="ftco-animate">
-                  <a href="#"><span class="icon-instagram"></span></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-5">
-              <h2 class="ftco-heading-2">Services</h2>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#" class="py-1 d-block"
-                    ><span class="ion-ios-arrow-forward mr-3"></span>Family
-                    Law</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="py-1 d-block"
-                    ><span class="ion-ios-arrow-forward mr-3"></span>Business
-                    Law</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="py-1 d-block"
-                    ><span class="ion-ios-arrow-forward mr-3"></span>Insurance
-                    Law</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="py-1 d-block"
-                    ><span class="ion-ios-arrow-forward mr-3"></span>Criminal
-                    Law</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="py-1 d-block"
-                    ><span class="ion-ios-arrow-forward mr-3"></span>Drug
-                    Offenses</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="py-1 d-block"
-                    ><span class="ion-ios-arrow-forward mr-3"></span>Fire
-                    Accident</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="py-1 d-block"
-                    ><span class="ion-ios-arrow-forward mr-3"></span>Employment
-                    Law</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="py-1 d-block"
-                    ><span class="ion-ios-arrow-forward mr-3"></span>Property
-                    Law</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Business Hours</h2>
-              <div class="opening-hours">
-                <h4>Opening Days:</h4>
-                <p class="pl-3" style="font-size: 14.5px;">
-                  <span>Monday - Friday : 9am to 20 pm</span>
-                  <span>Saturday : 9am to 17 pm</span>
-                </p>
-                <h4>Vacations:</h4>
-                <p class="pl-3" style="font-size: 14.5px;">
-                  <span>All Sunday Days</span>
-                  <span>All Official Holidays</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Have a Questions?</h2>
-              <div class="block-23 mb-3">
-                <ul>
-                  <li>
-                    <span class="icon icon-map-marker"></span
-                    ><span class="text"
-                      >KK493 St. Sonatube, Kicukiro, Kigali, RWANDA</span
-                    >
-                  </li>
-                  <li>
-                    <a href="tel:/788352940"
-                      ><span class="icon icon-phone"></span
-                      ><span class="text">(+250) 788352940</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="mailto:nselawchambers@gmail.com"
-                      ><span class="icon icon-envelope"></span
-                      ><span class="text">nselawchambers@gmail.com</span>
-                    
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <p>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              Copyright &copy;
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
-              All rights reserved | nse law chambers
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- loader -->
-    <div id="ftco-loader" class="show fullscreen">
-      <svg class="circular" width="48px" height="48px">
-        <circle
-          class="path-bg"
-          cx="24"
-          cy="24"
-          r="22"
-          fill="none"
-          stroke-width="4"
-          stroke="#eeeeee"
-        />
-        <circle
-          class="path"
-          cx="24"
-          cy="24"
-          r="22"
-          fill="none"
-          stroke-width="4"
-          stroke-miterlimit="10"
-          stroke="#F96D00"
-        />
-      </svg>
+    <!-- Category filter -->
+    <div class="practice-filter" data-reveal>
+      <button class="practice-filter__btn active" data-filter="all">All Areas</button>
+      <button class="practice-filter__btn" data-filter="litigation">Litigation</button>
+      <button class="practice-filter__btn" data-filter="advisory">Advisory</button>
+      <button class="practice-filter__btn" data-filter="corporate">Corporate</button>
+      <button class="practice-filter__btn" data-filter="ip">Intellectual Property</button>
+      <button class="practice-filter__btn" data-filter="family">Family &amp; Personal</button>
     </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
-    <script src="js/main.js"></script>
+    <div class="practices-page-grid">
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-          const container = document.getElementById('practiceAreasContainer');
-          const paginationButtonsContainer = document.getElementById('paginationButtons');
-          const itemsPerPage = 8;
-      
-          // Calculate total number of pages based on itemsPerPage
-          const totalPracticeAreas = container.children.length;
-          const totalPages = Math.ceil(totalPracticeAreas / itemsPerPage);
-      
-          // Function to create pagination buttons
-          function createPaginationButton(page) {
-              const button = document.createElement('button');
-              button.classList.add('pagination-button');  // Add the pagination-button class
-              button.innerText = page;
-              button.addEventListener('click', function () {
-                  showPracticeAreas(page);
-                  updateActiveButton(button);
-                  scrollToTopOfSection();
-              });
-              return button;
-          }
-      
-           // Function to show practice areas for a specific page
-           function showPracticeAreas(page) {
-               const start = (page - 1) * itemsPerPage;
-               const end = start + itemsPerPage;
-               for (let i = 0; i < totalPracticeAreas; i++) {
-                   if (i >= start && i < end) {
-                       container.children[i].style.display = 'block';
-                   } else {
-                       container.children[i].style.display = 'none';
-                   }
-               }
-           }
-      
-          // Function to update the active button
-          function updateActiveButton(activeButton) {
-              // Remove the 'active' class from all buttons
-              const buttons = paginationButtonsContainer.querySelectorAll('button');
-              buttons.forEach(button => button.classList.remove('active'));
-      
-              // Add the 'active' class to the clicked button
-              activeButton.classList.add('active');
-          }
-      
-          // Function to scroll to the top of the section
-          function scrollToTopOfSection() {
-              container.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-      
-          // Create and append pagination buttons
-          for (let i = 1; i <= totalPages; i++) {
-              const button = createPaginationButton(i);
-              paginationButtonsContainer.appendChild(button);
-          }
-      
-          // Show the first page initially and highlight the corresponding button
-          showPracticeAreas(1);
-          updateActiveButton(paginationButtonsContainer.querySelector('button'));
-      });
-      </script>
-      
+      <!-- LITIGATION -->
+      <div class="practice-page-card" data-category="litigation" data-reveal>
+        <div class="practice-page-card__tag">Litigation</div>
+        <h3 class="practice-page-card__title">Civil Litigation</h3>
+        <p class="practice-page-card__desc">Representation in civil disputes including breach of contract, debt recovery, property claims, and tortious liability before Rwandan courts at all levels.</p>
+      </div>
 
-  </body>
+      <div class="practice-page-card" data-category="litigation" data-reveal data-reveal-delay="1">
+        <div class="practice-page-card__tag">Litigation</div>
+        <h3 class="practice-page-card__title">Criminal Defence</h3>
+        <p class="practice-page-card__desc">Vigorous defence at every stage of criminal proceedings — from police investigation and detention through trial, sentencing, and appeal — with a focus on protecting your rights.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="litigation" data-reveal data-reveal-delay="2">
+        <div class="practice-page-card__tag">Litigation</div>
+        <h3 class="practice-page-card__title">Construction, Energy &amp; Infrastructure Disputes</h3>
+        <p class="practice-page-card__desc">Expert handling of disputes arising from construction contracts, engineering projects, energy developments, and major infrastructure works.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="litigation" data-reveal>
+        <div class="practice-page-card__tag">Litigation</div>
+        <h3 class="practice-page-card__title">Constitutional Law &amp; Human Rights</h3>
+        <p class="practice-page-card__desc">Challenging unconstitutional legislation and government conduct. Protecting fundamental rights and freedoms through the courts and human rights bodies.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="litigation" data-reveal data-reveal-delay="1">
+        <div class="practice-page-card__tag">Litigation</div>
+        <h3 class="practice-page-card__title">Administrative Law</h3>
+        <p class="practice-page-card__desc">Judicial review of government decisions and regulatory actions. We challenge and defend public authority decisions that affect individuals and businesses.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="litigation" data-reveal data-reveal-delay="2">
+        <div class="practice-page-card__tag">Litigation</div>
+        <h3 class="practice-page-card__title">Insurance Law</h3>
+        <p class="practice-page-card__desc">Handling insurance disputes, coverage analysis, claims management, and litigation involving insurers, policyholders, and third parties.</p>
+      </div>
+
+      <!-- ADVISORY -->
+      <div class="practice-page-card" data-category="advisory" data-reveal>
+        <div class="practice-page-card__tag">Advisory</div>
+        <h3 class="practice-page-card__title">Banking &amp; Finance Law</h3>
+        <p class="practice-page-card__desc">Advising banks, financial institutions, lenders, and borrowers on regulatory compliance, secured lending, loan documentation, and financial dispute resolution.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="advisory" data-reveal data-reveal-delay="1">
+        <div class="practice-page-card__tag">Advisory</div>
+        <h3 class="practice-page-card__title">Public Procurement Law</h3>
+        <p class="practice-page-card__desc">Guidance on Rwanda's public procurement regulations and procedures, tender challenges, contract disputes, and compliance for both bidders and contracting authorities.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="advisory" data-reveal data-reveal-delay="2">
+        <div class="practice-page-card__tag">Advisory</div>
+        <h3 class="practice-page-card__title">Labour Law</h3>
+        <p class="practice-page-card__desc">Advising employers and employees on employment contracts, workplace policies, redundancy, unfair dismissal, and employment tribunal proceedings.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="advisory" data-reveal>
+        <div class="practice-page-card__tag">Advisory</div>
+        <h3 class="practice-page-card__title">International Law</h3>
+        <p class="practice-page-card__desc">Cross-border legal advice covering international trade, EAC and COMESA frameworks, treaty obligations, diplomatic matters, and foreign investment regulations.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="advisory" data-reveal data-reveal-delay="1">
+        <div class="practice-page-card__tag">Advisory</div>
+        <h3 class="practice-page-card__title">Land &amp; Property Law</h3>
+        <p class="practice-page-card__desc">Land registration, title searches, property transfers, lease agreements, boundary disputes, and conveyancing transactions across Rwanda.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="advisory" data-reveal data-reveal-delay="2">
+        <div class="practice-page-card__tag">Advisory</div>
+        <h3 class="practice-page-card__title">Taxation Matters</h3>
+        <p class="practice-page-card__desc">Tax planning, compliance advice, RRA dispute resolution, tax appeals, and structuring of transactions to minimise tax exposure under Rwandan law.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="advisory" data-reveal>
+        <div class="practice-page-card__tag">Advisory</div>
+        <h3 class="practice-page-card__title">Legal Opinions &amp; Advisory</h3>
+        <p class="practice-page-card__desc">Formal legal opinions, due diligence reports, risk assessments, and bespoke legal advice for individuals, businesses, financial institutions, and government bodies.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="advisory" data-reveal data-reveal-delay="1">
+        <div class="practice-page-card__tag">Advisory</div>
+        <h3 class="practice-page-card__title">Migration Law</h3>
+        <p class="practice-page-card__desc">Assistance with residency applications, work permits, refugee status, citizenship matters, and immigration-related disputes and appeals in Rwanda.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="advisory" data-reveal data-reveal-delay="2">
+        <div class="practice-page-card__tag">Advisory</div>
+        <h3 class="practice-page-card__title">Commercial Law</h3>
+        <p class="practice-page-card__desc">Contract drafting and review, commercial dispute resolution, distribution agreements, agency law, and general commercial advice for businesses of all sizes.</p>
+      </div>
+
+      <!-- CORPORATE -->
+      <div class="practice-page-card" data-category="corporate" data-reveal>
+        <div class="practice-page-card__tag">Corporate</div>
+        <h3 class="practice-page-card__title">Company &amp; Business Registration</h3>
+        <p class="practice-page-card__desc">Incorporation of companies, NGOs, and partnerships under Rwandan law, including all RDB filings, statutory compliance, and post-incorporation advisory.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="corporate" data-reveal data-reveal-delay="1">
+        <div class="practice-page-card__tag">Corporate</div>
+        <h3 class="practice-page-card__title">Merger &amp; Acquisition</h3>
+        <p class="practice-page-card__desc">Legal structuring, due diligence, regulatory clearance, transaction documentation, and post-completion matters for M&amp;A transactions in Rwanda and the region.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="corporate" data-reveal data-reveal-delay="2">
+        <div class="practice-page-card__tag">Corporate</div>
+        <h3 class="practice-page-card__title">Corporate Restructuring</h3>
+        <p class="practice-page-card__desc">Advising on business reorganisation, group restructuring, insolvency proceedings, and workouts — including creditor negotiations and asset protection.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="corporate" data-reveal>
+        <div class="practice-page-card__tag">Corporate</div>
+        <h3 class="practice-page-card__title">Shareholders Dispute Resolution</h3>
+        <p class="practice-page-card__desc">Resolving disputes between shareholders, directors, and partners — through negotiation, mediation, arbitration, or litigation — to protect your business interests.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="corporate" data-reveal data-reveal-delay="1">
+        <div class="practice-page-card__tag">Corporate</div>
+        <h3 class="practice-page-card__title">Joint Venture Deals</h3>
+        <p class="practice-page-card__desc">Structuring, negotiating, and documenting joint venture agreements, partnership arrangements, and strategic alliances for local and international parties.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="corporate" data-reveal data-reveal-delay="2">
+        <div class="practice-page-card__tag">Corporate</div>
+        <h3 class="practice-page-card__title">Company Secretarial Services</h3>
+        <p class="practice-page-card__desc">Board support, statutory filings, minute-keeping, regulatory compliance, and ongoing corporate governance advisory for companies operating in Rwanda.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="corporate" data-reveal>
+        <div class="practice-page-card__tag">Corporate</div>
+        <h3 class="practice-page-card__title">Drafting Articles of Association</h3>
+        <p class="practice-page-card__desc">Tailored drafting and amendment of company constitutions, shareholder agreements, by-laws, and other foundational corporate documents.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="corporate" data-reveal data-reveal-delay="1">
+        <div class="practice-page-card__tag">Corporate</div>
+        <h3 class="practice-page-card__title">Trusts &amp; Investment Funds</h3>
+        <p class="practice-page-card__desc">Establishment and administration of trusts, investment vehicles, and fund structures for wealth management and succession planning.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="corporate" data-reveal data-reveal-delay="2">
+        <div class="practice-page-card__tag">Corporate</div>
+        <h3 class="practice-page-card__title">Directorship Services</h3>
+        <p class="practice-page-card__desc">Providing professional director services, advising on directors' duties, liability exposure, and corporate governance best practice under Rwandan company law.</p>
+      </div>
+
+      <!-- INTELLECTUAL PROPERTY -->
+      <div class="practice-page-card" data-category="ip" data-reveal>
+        <div class="practice-page-card__tag">Intellectual Property</div>
+        <h3 class="practice-page-card__title">Trademark Registration &amp; Protection</h3>
+        <p class="practice-page-card__desc">Trademark searches, registration, licensing, and enforcement — including opposition proceedings and litigation against infringement in Rwanda and regionally.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="ip" data-reveal data-reveal-delay="1">
+        <div class="practice-page-card__tag">Intellectual Property</div>
+        <h3 class="practice-page-card__title">Patent Law</h3>
+        <p class="practice-page-card__desc">Patent filing, prosecution, licensing, and litigation for inventors and businesses seeking to protect technical innovations in Rwanda and internationally.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="ip" data-reveal data-reveal-delay="2">
+        <div class="practice-page-card__tag">Intellectual Property</div>
+        <h3 class="practice-page-card__title">Copyright</h3>
+        <p class="practice-page-card__desc">Protection of original works — literary, musical, artistic, and software creations — including licensing, infringement actions, and rights management.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="ip" data-reveal>
+        <div class="practice-page-card__tag">Intellectual Property</div>
+        <h3 class="practice-page-card__title">Trade Secret Protection</h3>
+        <p class="practice-page-card__desc">Advising on confidentiality agreements, non-disclosure obligations, and legal action to prevent misappropriation of valuable business secrets and know-how.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="ip" data-reveal data-reveal-delay="1">
+        <div class="practice-page-card__tag">Intellectual Property</div>
+        <h3 class="practice-page-card__title">Cyber Law &amp; e-Commerce</h3>
+        <p class="practice-page-card__desc">Legal advice on data protection, e-commerce regulation, digital contracts, online fraud, cybercrime defence, and Rwanda's emerging digital economy framework.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="ip" data-reveal data-reveal-delay="2">
+        <div class="practice-page-card__tag">Intellectual Property</div>
+        <h3 class="practice-page-card__title">Software &amp; Technology Law</h3>
+        <p class="practice-page-card__desc">Licensing of software, IT contracts, technology transfer agreements, and legal protection for software developers, tech companies, and digital innovators.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="ip" data-reveal>
+        <div class="practice-page-card__tag">Intellectual Property</div>
+        <h3 class="practice-page-card__title">Geographical Indications</h3>
+        <p class="practice-page-card__desc">Registration and protection of geographical indications for Rwandan products — including coffee and tea — in domestic and international markets.</p>
+      </div>
+
+      <!-- FAMILY & PERSONAL -->
+      <div class="practice-page-card" data-category="family" data-reveal>
+        <div class="practice-page-card__tag">Family &amp; Personal</div>
+        <h3 class="practice-page-card__title">Family Law</h3>
+        <p class="practice-page-card__desc">Sensitive and expert handling of divorce, child custody and maintenance, matrimonial property division, adoption, and domestic matters under Rwandan family law.</p>
+      </div>
+
+      <!-- DISPUTE RESOLUTION -->
+      <div class="practice-page-card" data-category="advisory" data-reveal data-reveal-delay="1">
+        <div class="practice-page-card__tag">Advisory</div>
+        <h3 class="practice-page-card__title">Conciliation &amp; Mediation</h3>
+        <p class="practice-page-card__desc">Neutral, confidential dispute resolution through facilitated negotiation. We help parties reach durable settlements without the cost and delay of court proceedings.</p>
+      </div>
+
+      <div class="practice-page-card" data-category="advisory" data-reveal data-reveal-delay="2">
+        <div class="practice-page-card__tag">Advisory</div>
+        <h3 class="practice-page-card__title">Adjudication</h3>
+        <p class="practice-page-card__desc">Specialist adjudication for construction and engineering disputes — a fast, binding process for resolving payment disputes and technical issues on major projects.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section class="section section--alt">
+  <div class="container" style="text-align:center;max-width:640px;">
+    <p class="section-label" data-reveal>Need Legal Help?</p>
+    <h2 data-reveal>Speak With Our Team Today</h2>
+    <p data-reveal style="margin-bottom:2rem;">If your matter is not listed above, contact us — our attorneys cover a wide range of legal issues and will advise you on the right approach.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;" data-reveal>
+      <a href="index.html#contact" class="btn btn-navy">Send a Message</a>
+      <a href="tel:+250788352940" class="btn btn-outline" style="border-color:var(--navy);color:var(--navy);">Call +250 788 352 940</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand-name">NSE Law Chambers</div>
+        <span class="footer__brand-tag">Attorneys &amp; Counsellors</span>
+        <p class="footer__brand-desc">A full-service law firm in Kigali providing trusted legal counsel to individuals, businesses, and institutions across Rwanda and East Africa.</p>
+        <div class="footer__social">
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="mailto:nselawchambers@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Practice Areas</div>
+        <ul class="footer__links">
+          <li><a href="#">Banking &amp; Finance</a></li>
+          <li><a href="#">Civil Litigation</a></li>
+          <li><a href="#">Criminal Defence</a></li>
+          <li><a href="#">Family Law</a></li>
+          <li><a href="#">Land &amp; Property</a></li>
+          <li><a href="#">Intellectual Property</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Quick Links</div>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About the Firm</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="practice-areas.html">Practice Areas</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Contact</div>
+        <div class="footer__contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          KK15Rd, Kicukiro Center, RG Market Building, 4th Floor, Kigali
+        </div>
+        <div class="footer__contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012.03 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+          +250 788 352 940 / +250 788 307 107
+        </div>
+        <div class="footer__contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          nselawchambers@gmail.com
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; <span id="year"></span> NSE Law Chambers. All rights reserved.</span>
+      <span>Kigali, Rwanda</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
 </html>
